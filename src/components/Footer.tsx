@@ -1,5 +1,6 @@
 import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import simandouLogo from "@/assets/simandou-2040-logo.png";
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
       {/* Boutons d'action */}
       <div className="border-b border-border bg-muted/30 py-8">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-8">
             <Button 
               size="lg" 
               className="w-full bg-primary text-primary-foreground hover:bg-primary/90 sm:w-auto sm:min-w-[200px]"
@@ -126,6 +127,15 @@ const Footer = () => {
               >
                 <Youtube className="h-5 w-5" />
               </a>
+            </div>
+            
+            {/* Logo Simandou 2040 */}
+            <div className="mt-6 pt-4 border-t border-border">
+              <img 
+                src={simandouLogo} 
+                alt="Simandou 2040" 
+                className="h-16 w-auto object-contain"
+              />
             </div>
           </div>
         </div>
