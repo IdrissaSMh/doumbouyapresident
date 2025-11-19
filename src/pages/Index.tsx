@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
+import GallerySection from "@/components/GallerySection";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
 
@@ -11,6 +12,7 @@ const Index = () => {
       <main className="flex-1">
         <HeroSection />
         <CTASection />
+        <GallerySection />
       </main>
       <Footer />
       <FloatingActions />

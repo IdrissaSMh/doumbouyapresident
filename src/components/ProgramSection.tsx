@@ -35,6 +35,29 @@ const ProgramSection = () => {
     },
   ];
 
+  const simandouPillars = [
+    {
+      title: "1. Infrastructure & Logistique",
+      description: "Développement d'infrastructures modernes incluant le port en eaux profondes, le chemin de fer transguinéen et les routes d'accès stratégiques.",
+    },
+    {
+      title: "2. Industrialisation",
+      description: "Transformation locale des ressources minières avec la création de zones industrielles et de raffineries pour maximiser la valeur ajoutée.",
+    },
+    {
+      title: "3. Capital Humain",
+      description: "Formation de 100 000 cadres guinéens dans les métiers miniers et industriels pour assurer l'autonomie technologique du pays.",
+    },
+    {
+      title: "4. Développement Local",
+      description: "Amélioration des conditions de vie des communautés locales avec des écoles, hôpitaux et programmes de développement durable.",
+    },
+    {
+      title: "5. Diversification Économique",
+      description: "Utilisation des revenus miniers pour développer l'agriculture, le tourisme et les PME afin de créer une économie résiliente et diversifiée.",
+    },
+  ];
+
   return (
     <section id="programme" className="bg-muted/30 py-20 lg:py-32">
       <div className="container mx-auto px-4">
@@ -76,6 +99,37 @@ const ProgramSection = () => {
               </Card>
             );
           })}
+        </div>
+
+        {/* Projet Simandou 2040 */}
+        <div className="mt-24">
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <h3 className="mb-4 text-3xl font-bold text-foreground lg:text-4xl">
+              Projet Simandou 2040
+            </h3>
+            <div className="mx-auto mb-6 h-1 w-20 bg-primary" />
+            <p className="text-lg text-muted-foreground">
+              Les 5 piliers stratégiques pour faire de la Guinée une puissance minière et industrielle
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {simandouPillars.map((pillar, index) => (
+              <Card
+                key={index}
+                className="border-2 border-primary/20 bg-card transition-all hover:border-primary hover:shadow-lg"
+              >
+                <CardContent className="p-6">
+                  <h4 className="mb-3 text-lg font-bold text-primary">
+                    {pillar.title}
+                  </h4>
+                  <p className="text-muted-foreground">
+                    {pillar.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>
