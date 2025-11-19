@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import logoAdp from "@/assets/logo-adp.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,14 +21,11 @@ const Header = () => {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="relative flex h-16 w-16 items-center justify-center">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent via-primary to-accent" />
-              <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-white">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-accent to-primary">
-                  <span className="text-xl font-bold text-white">D</span>
-                </div>
-              </div>
-            </div>
+            <img 
+              src={logoAdp} 
+              alt="ADP Alliance Doumbouya Président" 
+              className="h-16 w-16 object-contain"
+            />
             <div className="flex flex-col leading-none">
               <span className="text-lg font-bold text-secondary sm:text-xl">DOUMBOUYA</span>
               <span className="text-lg font-bold text-primary sm:text-xl">PRÉSIDENT</span>
