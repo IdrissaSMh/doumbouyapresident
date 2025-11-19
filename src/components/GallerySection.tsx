@@ -2,6 +2,11 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { Dialog, DialogContent, DialogTitle } from "./ui/dialog";
 import { X } from "lucide-react";
+import infrastructure1 from "@/assets/infrastructure-1.jpeg";
+import infrastructure2 from "@/assets/infrastructure-2.jpg";
+import visiteChantier from "@/assets/visite-chantier.jpeg";
+import route1 from "@/assets/route-1.jpeg";
+import route2 from "@/assets/route-2.jpeg";
 
 type Category = "all" | "infrastructure" | "events" | "diplomacy";
 
@@ -17,6 +22,46 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   {
     id: 1,
+    title: "Échangeur Autoroutier Conakry",
+    category: "infrastructure",
+    image: infrastructure1,
+    description: "Infrastructure routière moderne avec échangeur autoroutier au cœur de Conakry, améliorant la fluidité du trafic",
+    date: "2024"
+  },
+  {
+    id: 2,
+    title: "Échangeur Moderne de Conakry",
+    category: "infrastructure",
+    image: infrastructure2,
+    description: "Construction d'un échangeur autoroutier multi-niveaux pour désengorger le trafic urbain",
+    date: "2024"
+  },
+  {
+    id: 3,
+    title: "Visite de Chantier Présidentielle",
+    category: "events",
+    image: visiteChantier,
+    description: "Le Président Mamadi Doumbouya en visite d'inspection sur les chantiers de développement national",
+    date: "2024"
+  },
+  {
+    id: 4,
+    title: "Réhabilitation des Routes Urbaines",
+    category: "infrastructure",
+    image: route1,
+    description: "Travaux de réfection et modernisation des voies urbaines pour améliorer la mobilité",
+    date: "2024"
+  },
+  {
+    id: 5,
+    title: "Construction de Routes Modernes",
+    category: "infrastructure",
+    image: route2,
+    description: "Chantier de construction routière avec équipements modernes pour des infrastructures durables",
+    date: "2024"
+  },
+  {
+    id: 6,
     title: "Autoroute Conakry-Kindia",
     category: "infrastructure",
     image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop",
@@ -24,7 +69,7 @@ const galleryItems: GalleryItem[] = [
     date: "2023"
   },
   {
-    id: 2,
+    id: 7,
     title: "Centrale Électrique de Souapiti",
     category: "infrastructure",
     image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=600&fit=crop",
@@ -32,7 +77,7 @@ const galleryItems: GalleryItem[] = [
     date: "2024"
   },
   {
-    id: 3,
+    id: 8,
     title: "Hôpital National de Référence",
     category: "infrastructure",
     image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=600&fit=crop",
@@ -40,7 +85,7 @@ const galleryItems: GalleryItem[] = [
     date: "2023"
   },
   {
-    id: 4,
+    id: 9,
     title: "Assises Nationales",
     category: "events",
     image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop",
@@ -48,7 +93,7 @@ const galleryItems: GalleryItem[] = [
     date: "2022"
   },
   {
-    id: 5,
+    id: 10,
     title: "Cérémonie d'Investiture",
     category: "events",
     image: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&h=600&fit=crop",
@@ -56,7 +101,7 @@ const galleryItems: GalleryItem[] = [
     date: "2021"
   },
   {
-    id: 6,
+    id: 11,
     title: "Fête de l'Indépendance 2024",
     category: "events",
     image: "https://images.unsplash.com/photo-1555664424-778a1e5e1b48?w=800&h=600&fit=crop",
@@ -64,7 +109,7 @@ const galleryItems: GalleryItem[] = [
     date: "2024"
   },
   {
-    id: 7,
+    id: 12,
     title: "Sommet Union Africaine",
     category: "diplomacy",
     image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&h=600&fit=crop",
@@ -72,7 +117,7 @@ const galleryItems: GalleryItem[] = [
     date: "2024"
   },
   {
-    id: 8,
+    id: 13,
     title: "Rencontre avec le Président Sénégalais",
     category: "diplomacy",
     image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=600&fit=crop",
@@ -80,7 +125,7 @@ const galleryItems: GalleryItem[] = [
     date: "2023"
   },
   {
-    id: 9,
+    id: 14,
     title: "Visite d'État en Côte d'Ivoire",
     category: "diplomacy",
     image: "https://images.unsplash.com/photo-1505778276668-26b3ff7af103?w=800&h=600&fit=crop",
@@ -109,7 +154,7 @@ const GallerySection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Galerie des Réalisations
+            Les réalisations de Président Mamadi Doumbouya
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Découvrez en images les actions concrètes et les réalisations majeures 
