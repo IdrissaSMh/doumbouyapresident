@@ -11,8 +11,8 @@ const Index = () => {
       <Header />
       <main className="flex-1">
         <HeroSection />
-        <CTASection />
         <GallerySection />
+        <CTASection />
       </main>
       <Footer />
       <FloatingActions />
