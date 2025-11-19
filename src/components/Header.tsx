@@ -14,6 +14,7 @@ const Header = () => {
     { label: "LES COMMUNIQUÉS", href: "/communiques" },
     { label: "L'ACTUALITÉ", href: "/actualites" },
     { label: "ÉVÉNEMENTS", href: "/evenements" },
+    { label: "CONTACT", href: "/contact" },
   ];
 
   return (
