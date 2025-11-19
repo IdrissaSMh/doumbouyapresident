@@ -120,10 +120,10 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">
-                          Responsable Communication
+                          Mr Magassouba
                         </h3>
                         <p className="text-sm text-muted-foreground">
-                          Service Relations Presse
+                          Responsable Communication
                         </p>
                       </div>
                     </div>
@@ -137,8 +137,8 @@ const Contact = () => {
                           Ligne Directe
                         </h3>
                         <p className="text-sm text-muted-foreground">
-                          <a href="tel:+224628606675" className="hover:text-secondary transition-colors">
-                            +224 628 60 66 75
+                          <a href="tel:+224610010230" className="hover:text-secondary transition-colors">
+                            +224 610 010 230
                           </a>
                         </p>
                       </div>
@@ -153,8 +153,8 @@ const Contact = () => {
                           Email Presse
                         </h3>
                         <p className="text-sm text-muted-foreground">
-                          <a href="mailto:presse@adp-guinee.org" className="hover:text-accent transition-colors">
-                            presse@adp-guinee.org
+                          <a href="mailto:magassouba99@gmail.com" className="hover:text-accent transition-colors">
+                            magassouba99@gmail.com
                           </a>
                         </p>
                       </div>
