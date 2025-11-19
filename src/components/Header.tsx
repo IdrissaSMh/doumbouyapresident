@@ -12,6 +12,7 @@ const Header = () => {
     { label: "L'ALLIANCE", href: "#alliance" },
     { label: "LE PROGRAMME", href: "#programme" },
     { label: "LES COMMUNIQUÉS", href: "#communiques" },
+    { label: "GALERIE", href: "#galerie" },
     { label: "L'ACTUALITÉ", href: "#actualites" },
   ];
 
