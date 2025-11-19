@@ -8,12 +8,11 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "LE CANDIDAT", href: "#candidat" },
-    { label: "L'ALLIANCE", href: "#alliance" },
-    { label: "LE PROGRAMME", href: "#programme" },
-    { label: "LES COMMUNIQUÉS", href: "#communiques" },
-    { label: "GALERIE", href: "#galerie" },
-    { label: "L'ACTUALITÉ", href: "#actualites" },
+    { label: "LE CANDIDAT", href: "/candidat" },
+    { label: "L'ALLIANCE", href: "/alliance" },
+    { label: "LE PROGRAMME", href: "/programme" },
+    { label: "LES COMMUNIQUÉS", href: "/communiques" },
+    { label: "L'ACTUALITÉ", href: "/actualites" },
   ];
 
   return (
@@ -36,13 +35,13 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex lg:items-center lg:space-x-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
+                to={item.href}
                 className="text-sm font-semibold uppercase text-foreground transition-colors hover:text-primary"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -65,14 +64,14 @@ const Header = () => {
           <nav className="border-t border-border py-4 lg:hidden">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.label}
-                  href={item.href}
+                  to={item.href}
                   className="text-sm font-semibold uppercase text-foreground transition-colors hover:text-primary"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
             </div>
           </nav>

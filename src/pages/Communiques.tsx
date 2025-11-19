@@ -1,16 +1,14 @@
 import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import CTASection from "@/components/CTASection";
+import CommuniquesSection from "@/components/CommuniquesSection";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
 
-const Index = () => {
+const Communiques = () => {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <HeroSection />
-        <CTASection />
+        <CommuniquesSection />
       </main>
       <Footer />
       <FloatingActions />
@@ -18,4 +16,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Communiques;

@@ -45,27 +45,27 @@ const Footer = () => {
             <h3 className="text-sm font-semibold text-foreground">Navigation</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/#candidat" className="text-muted-foreground transition-colors hover:text-foreground">
+                <a href="/candidat" className="text-muted-foreground transition-colors hover:text-foreground">
                   Le Candidat
                 </a>
               </li>
               <li>
-                <a href="/#alliance" className="text-muted-foreground transition-colors hover:text-foreground">
+                <a href="/alliance" className="text-muted-foreground transition-colors hover:text-foreground">
                   L'Alliance
                 </a>
               </li>
               <li>
-                <a href="/#programme" className="text-muted-foreground transition-colors hover:text-foreground">
+                <a href="/programme" className="text-muted-foreground transition-colors hover:text-foreground">
                   Le Programme
                 </a>
               </li>
               <li>
-                <a href="/#communiques" className="text-muted-foreground transition-colors hover:text-foreground">
+                <a href="/communiques" className="text-muted-foreground transition-colors hover:text-foreground">
                   Les Communiqués
                 </a>
               </li>
               <li>
-                <a href="/#actualites" className="text-muted-foreground transition-colors hover:text-foreground">
+                <a href="/actualites" className="text-muted-foreground transition-colors hover:text-foreground">
                   L'Actualité
                 </a>
               </li>
