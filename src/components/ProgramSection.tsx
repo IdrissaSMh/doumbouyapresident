@@ -108,25 +108,6 @@ const ProgramSection = () => {
 
         {/* Projet Simandou 2040 */}
         <div className="mt-24">
-          {/* Images des 5 piliers */}
-          <div className="mb-12 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
-            <div className="animate-fade-in">
-              <img src={pilier1} alt="Pilier 1 - Agriculture" className="w-full h-auto rounded-lg shadow-lg transition-transform hover:scale-105" />
-            </div>
-            <div className="animate-fade-in" style={{ animationDelay: '100ms' }}>
-              <img src={pilier2} alt="Pilier 2 - Éducation" className="w-full h-auto rounded-lg shadow-lg transition-transform hover:scale-105" />
-            </div>
-            <div className="animate-fade-in" style={{ animationDelay: '200ms' }}>
-              <img src={pilier3} alt="Pilier 3 - Infrastructures" className="w-full h-auto rounded-lg shadow-lg transition-transform hover:scale-105" />
-            </div>
-            <div className="animate-fade-in" style={{ animationDelay: '300ms' }}>
-              <img src={pilier4} alt="Pilier 4 - Économie" className="w-full h-auto rounded-lg shadow-lg transition-transform hover:scale-105" />
-            </div>
-            <div className="animate-fade-in" style={{ animationDelay: '400ms' }}>
-              <img src={pilier5} alt="Pilier 5 - Santé" className="w-full h-auto rounded-lg shadow-lg transition-transform hover:scale-105" />
-            </div>
-          </div>
-
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <h3 className="mb-4 text-3xl font-extrabold uppercase text-foreground lg:text-4xl">
               LES 5 PILIERS DU PROJET SIMANDOU 2040
@@ -137,22 +118,81 @@ const ProgramSection = () => {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {simandouPillars.map((pillar, index) => (
-              <Card
-                key={index}
-                className="border-2 border-primary/20 bg-card transition-all hover:border-primary hover:shadow-lg"
-              >
-                <CardContent className="p-6">
-                  <h4 className="mb-3 text-lg font-bold text-primary">
-                    {pillar.title}
-                  </h4>
-                  <p className="text-muted-foreground">
-                    {pillar.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {/* Pilier 1 */}
+            <Card className="border-2 border-primary/20 bg-card transition-all hover:border-primary hover:shadow-lg animate-fade-in overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
+                <img src={pilier1} alt="Agriculture, Industrie Alimentaire & Commerce" className="w-full h-full object-cover transition-transform hover:scale-110" />
+              </div>
+              <CardContent className="p-6">
+                <h4 className="mb-3 text-lg font-bold text-primary">
+                  1. Agriculture, Industrie Alimentaire & Commerce
+                </h4>
+                <p className="text-muted-foreground">
+                  Développement d'infrastructures modernes incluant le port en eaux profondes, le chemin de fer transguinéen et les routes d'accès stratégiques.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Pilier 2 */}
+            <Card className="border-2 border-primary/20 bg-card transition-all hover:border-primary hover:shadow-lg animate-fade-in overflow-hidden" style={{ animationDelay: '100ms' }}>
+              <div className="relative h-48 overflow-hidden">
+                <img src={pilier2} alt="Éducation & Culture" className="w-full h-full object-cover transition-transform hover:scale-110" />
+              </div>
+              <CardContent className="p-6">
+                <h4 className="mb-3 text-lg font-bold text-primary">
+                  2. Éducation & Culture
+                </h4>
+                <p className="text-muted-foreground">
+                  Transformation locale des ressources minières avec la création de zones industrielles et de raffineries pour maximiser la valeur ajoutée.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Pilier 3 */}
+            <Card className="border-2 border-primary/20 bg-card transition-all hover:border-primary hover:shadow-lg animate-fade-in overflow-hidden" style={{ animationDelay: '200ms' }}>
+              <div className="relative h-48 overflow-hidden">
+                <img src={pilier3} alt="Infrastructures, Transports & Technologies" className="w-full h-full object-cover transition-transform hover:scale-110" />
+              </div>
+              <CardContent className="p-6">
+                <h4 className="mb-3 text-lg font-bold text-primary">
+                  3. Infrastructures, Transports & Technologies
+                </h4>
+                <p className="text-muted-foreground">
+                  Formation de 100 000 cadres guinéens dans les métiers miniers et industriels pour assurer l'autonomie technologique du pays.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Pilier 4 */}
+            <Card className="border-2 border-primary/20 bg-card transition-all hover:border-primary hover:shadow-lg animate-fade-in overflow-hidden" style={{ animationDelay: '300ms' }}>
+              <div className="relative h-48 overflow-hidden">
+                <img src={pilier4} alt="Économie, Finance & Assurance" className="w-full h-full object-cover transition-transform hover:scale-110" />
+              </div>
+              <CardContent className="p-6">
+                <h4 className="mb-3 text-lg font-bold text-primary">
+                  4. Économie, Finance & Assurance
+                </h4>
+                <p className="text-muted-foreground">
+                  Amélioration des conditions de vie des communautés locales avec des écoles, hôpitaux et programmes de développement durable.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Pilier 5 */}
+            <Card className="border-2 border-primary/20 bg-card transition-all hover:border-primary hover:shadow-lg animate-fade-in overflow-hidden" style={{ animationDelay: '400ms' }}>
+              <div className="relative h-48 overflow-hidden">
+                <img src={pilier5} alt="Santé & Bien-être" className="w-full h-full object-cover transition-transform hover:scale-110" />
+              </div>
+              <CardContent className="p-6">
+                <h4 className="mb-3 text-lg font-bold text-primary">
+                  5. Santé & Bien-être
+                </h4>
+                <p className="text-muted-foreground">
+                  Utilisation des revenus miniers pour développer l'agriculture, le tourisme et les PME afin de créer une économie résiliente et diversifiée.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
