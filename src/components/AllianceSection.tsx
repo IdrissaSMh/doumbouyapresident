@@ -1,7 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Target, Scale, Users2, CheckCircle2 } from "lucide-react";
 import presidentAllianceImg from "@/assets/president-alliance.jpg";
-import logoAdp from "@/assets/logo-adp.png";
 
 const AllianceSection = () => {
   const visionPoints = [
@@ -58,41 +57,12 @@ const AllianceSection = () => {
   return (
     <section id="alliance" className="py-20 lg:py-32">
       <div className="container mx-auto px-4">
-        {/* Logo ADP */}
-        <div className="flex justify-center mb-12">
-          <div className="relative flex h-32 w-32 items-center justify-center md:h-40 md:w-40">
-            <div className="absolute inset-0 animate-pulse rounded-full bg-primary/10 blur-2xl" />
-            <img 
-              src={logoAdp} 
-              alt="ADP Alliance Doumbouya Président" 
-              className="relative h-full w-full object-contain drop-shadow-2xl"
-            />
-          </div>
-        </div>
-
         {/* Header */}
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <h2 className="mb-4 text-4xl font-bold uppercase text-foreground lg:text-5xl">
             L'Alliance
           </h2>
           <div className="mx-auto mb-6 h-1 w-20 bg-secondary" />
-        </div>
-
-        {/* Introduction */}
-        <div className="mx-auto mb-16 max-w-4xl">
-          <Card className="border-2 border-primary/20">
-            <CardContent className="p-8">
-              <h3 className="mb-4 text-2xl font-bold text-foreground">
-                Alliance DOUMBOUYA PRÉSIDENT (ADP)
-              </h3>
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                L'Alliance DOUMBOUYA PRESIDENT (ADP) composée de Partis politiques, organisations de la Société Civile, 
-                Groupements de Femmes, Mouvements Associatifs et Mouvements de Soutien a pour objectif principal de 
-                mobiliser un soutien populaire massif et structuré autour de la candidature du Président Mamadi Doumbouya 
-                pour l'élire à l'élection présidentielle du 28 décembre 2025.
-              </p>
-            </CardContent>
-          </Card>
         </div>
 
         {/* Mission et Vision */}
