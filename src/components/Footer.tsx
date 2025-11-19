@@ -1,8 +1,30 @@
 import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   return (
     <footer id="contact" className="border-t border-border bg-card">
+      {/* Boutons d'action */}
+      <div className="border-b border-border bg-muted/30 py-8">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Button 
+              size="lg" 
+              className="w-full bg-primary text-primary-foreground hover:bg-primary/90 sm:w-auto sm:min-w-[200px]"
+            >
+              S'IMPLIQUER
+            </Button>
+            
+            <Button 
+              size="lg" 
+              className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 sm:w-auto sm:min-w-[200px]"
+            >
+              FAIRE UN DON
+            </Button>
+          </div>
+        </div>
+      </div>
+
       <div className="container mx-auto px-4 py-12">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* About */}
