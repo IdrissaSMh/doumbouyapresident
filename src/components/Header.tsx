@@ -20,7 +20,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3 transition-opacity hover:opacity-80 cursor-pointer">
             <img 
               src={logoAdp} 
               alt="ADP Alliance Doumbouya Président" 
