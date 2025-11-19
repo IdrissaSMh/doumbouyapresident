@@ -1,5 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap, Heart, Briefcase, Sprout, Shield } from "lucide-react";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import { X } from "lucide-react";
+import { useState } from "react";
 import pilier1 from "@/assets/pilier-1.png";
 import pilier2 from "@/assets/pilier-2.png";
 import pilier3 from "@/assets/pilier-3.png";
@@ -7,6 +10,8 @@ import pilier4 from "@/assets/pilier-4.png";
 import pilier5 from "@/assets/pilier-5.png";
 
 const ProgramSection = () => {
+  const [selectedPillar, setSelectedPillar] = useState<{ image: string; title: string; description: string } | null>(null);
+
   const programs = [
     {
       icon: Briefcase,
@@ -40,25 +45,30 @@ const ProgramSection = () => {
     },
   ];
 
-  const simandouPillars = [
+  const simandouPillarsData = [
     {
-      title: "1. Infrastructure & Logistique",
+      image: pilier1,
+      title: "1. Agriculture, Industrie Alimentaire & Commerce",
       description: "Développement d'infrastructures modernes incluant le port en eaux profondes, le chemin de fer transguinéen et les routes d'accès stratégiques.",
     },
     {
-      title: "2. Industrialisation",
+      image: pilier2,
+      title: "2. Éducation & Culture",
       description: "Transformation locale des ressources minières avec la création de zones industrielles et de raffineries pour maximiser la valeur ajoutée.",
     },
     {
-      title: "3. Capital Humain",
+      image: pilier3,
+      title: "3. Infrastructures, Transports & Technologies",
       description: "Formation de 100 000 cadres guinéens dans les métiers miniers et industriels pour assurer l'autonomie technologique du pays.",
     },
     {
-      title: "4. Développement Local",
+      image: pilier4,
+      title: "4. Économie, Finance & Assurance",
       description: "Amélioration des conditions de vie des communautés locales avec des écoles, hôpitaux et programmes de développement durable.",
     },
     {
-      title: "5. Diversification Économique",
+      image: pilier5,
+      title: "5. Santé & Bien-être",
       description: "Utilisation des revenus miniers pour développer l'agriculture, le tourisme et les PME afin de créer une économie résiliente et diversifiée.",
     },
   ];
@@ -119,81 +129,65 @@ const ProgramSection = () => {
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {/* Pilier 1 */}
-            <Card className="border-2 border-primary/20 bg-card transition-all hover:border-primary hover:shadow-lg animate-fade-in overflow-hidden">
-              <div className="relative h-48 overflow-hidden">
-                <img src={pilier1} alt="Agriculture, Industrie Alimentaire & Commerce" className="w-full h-full object-cover transition-transform hover:scale-110" />
-              </div>
-              <CardContent className="p-6">
-                <h4 className="mb-3 text-lg font-bold text-primary">
-                  1. Agriculture, Industrie Alimentaire & Commerce
-                </h4>
-                <p className="text-muted-foreground">
-                  Développement d'infrastructures modernes incluant le port en eaux profondes, le chemin de fer transguinéen et les routes d'accès stratégiques.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Pilier 2 */}
-            <Card className="border-2 border-primary/20 bg-card transition-all hover:border-primary hover:shadow-lg animate-fade-in overflow-hidden" style={{ animationDelay: '100ms' }}>
-              <div className="relative h-48 overflow-hidden">
-                <img src={pilier2} alt="Éducation & Culture" className="w-full h-full object-cover transition-transform hover:scale-110" />
-              </div>
-              <CardContent className="p-6">
-                <h4 className="mb-3 text-lg font-bold text-primary">
-                  2. Éducation & Culture
-                </h4>
-                <p className="text-muted-foreground">
-                  Transformation locale des ressources minières avec la création de zones industrielles et de raffineries pour maximiser la valeur ajoutée.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Pilier 3 */}
-            <Card className="border-2 border-primary/20 bg-card transition-all hover:border-primary hover:shadow-lg animate-fade-in overflow-hidden" style={{ animationDelay: '200ms' }}>
-              <div className="relative h-48 overflow-hidden">
-                <img src={pilier3} alt="Infrastructures, Transports & Technologies" className="w-full h-full object-cover transition-transform hover:scale-110" />
-              </div>
-              <CardContent className="p-6">
-                <h4 className="mb-3 text-lg font-bold text-primary">
-                  3. Infrastructures, Transports & Technologies
-                </h4>
-                <p className="text-muted-foreground">
-                  Formation de 100 000 cadres guinéens dans les métiers miniers et industriels pour assurer l'autonomie technologique du pays.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Pilier 4 */}
-            <Card className="border-2 border-primary/20 bg-card transition-all hover:border-primary hover:shadow-lg animate-fade-in overflow-hidden" style={{ animationDelay: '300ms' }}>
-              <div className="relative h-48 overflow-hidden">
-                <img src={pilier4} alt="Économie, Finance & Assurance" className="w-full h-full object-cover transition-transform hover:scale-110" />
-              </div>
-              <CardContent className="p-6">
-                <h4 className="mb-3 text-lg font-bold text-primary">
-                  4. Économie, Finance & Assurance
-                </h4>
-                <p className="text-muted-foreground">
-                  Amélioration des conditions de vie des communautés locales avec des écoles, hôpitaux et programmes de développement durable.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Pilier 5 */}
-            <Card className="border-2 border-primary/20 bg-card transition-all hover:border-primary hover:shadow-lg animate-fade-in overflow-hidden" style={{ animationDelay: '400ms' }}>
-              <div className="relative h-48 overflow-hidden">
-                <img src={pilier5} alt="Santé & Bien-être" className="w-full h-full object-cover transition-transform hover:scale-110" />
-              </div>
-              <CardContent className="p-6">
-                <h4 className="mb-3 text-lg font-bold text-primary">
-                  5. Santé & Bien-être
-                </h4>
-                <p className="text-muted-foreground">
-                  Utilisation des revenus miniers pour développer l'agriculture, le tourisme et les PME afin de créer une économie résiliente et diversifiée.
-                </p>
-              </CardContent>
-            </Card>
+            {simandouPillarsData.map((pillar, index) => (
+              <Card 
+                key={index}
+                className="group border-2 border-primary/20 bg-card transition-all duration-300 hover:border-primary hover:shadow-2xl hover:scale-105 animate-fade-in overflow-hidden cursor-pointer"
+                style={{ animationDelay: `${index * 100}ms` }}
+                onClick={() => setSelectedPillar(pillar)}
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={pillar.image} 
+                    alt={pillar.title} 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <CardContent className="p-6">
+                  <h4 className="mb-3 text-lg font-bold text-primary group-hover:text-primary/80 transition-colors">
+                    {pillar.title}
+                  </h4>
+                  <p className="text-muted-foreground text-sm line-clamp-3">
+                    {pillar.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
+
+          {/* Modal pour visualiser l'image en grand */}
+          <Dialog open={!!selectedPillar} onOpenChange={() => setSelectedPillar(null)}>
+            <DialogContent className="max-w-4xl p-0">
+              <DialogTitle className="sr-only">
+                {selectedPillar?.title || "Pilier"}
+              </DialogTitle>
+              {selectedPillar && (
+                <div className="relative">
+                  <button
+                    onClick={() => setSelectedPillar(null)}
+                    className="absolute top-4 right-4 z-10 p-2 bg-black/50 rounded-full text-white hover:bg-black/70 transition-colors"
+                    aria-label="Fermer"
+                  >
+                    <X size={24} />
+                  </button>
+                  <img
+                    src={selectedPillar.image}
+                    alt={selectedPillar.title}
+                    className="w-full h-auto max-h-[70vh] object-contain"
+                  />
+                  <div className="p-6 bg-card">
+                    <h3 className="text-2xl font-bold text-primary mb-3">
+                      {selectedPillar.title}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {selectedPillar.description}
+                    </p>
+                  </div>
+                </div>
+              )}
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
     </section>
