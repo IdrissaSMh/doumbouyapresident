@@ -1,16 +1,14 @@
 import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import CTASection from "@/components/CTASection";
+import AllianceSection from "@/components/AllianceSection";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
 
-const Index = () => {
+const Alliance = () => {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <HeroSection />
-        <CTASection />
+        <AllianceSection />
       </main>
       <Footer />
       <FloatingActions />
@@ -18,4 +16,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Alliance;
