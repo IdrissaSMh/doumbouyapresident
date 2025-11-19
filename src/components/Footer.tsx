@@ -23,23 +23,28 @@ const Footer = () => {
             <h3 className="text-sm font-semibold text-foreground">Navigation</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/#biographie" className="text-muted-foreground transition-colors hover:text-foreground">
-                  Biographie
+                <a href="/#candidat" className="text-muted-foreground transition-colors hover:text-foreground">
+                  Le Candidat
+                </a>
+              </li>
+              <li>
+                <a href="/#alliance" className="text-muted-foreground transition-colors hover:text-foreground">
+                  L'Alliance
                 </a>
               </li>
               <li>
                 <a href="/#programme" className="text-muted-foreground transition-colors hover:text-foreground">
-                  Programme
+                  Le Programme
+                </a>
+              </li>
+              <li>
+                <a href="/#communiques" className="text-muted-foreground transition-colors hover:text-foreground">
+                  Les Communiqués
                 </a>
               </li>
               <li>
                 <a href="/#actualites" className="text-muted-foreground transition-colors hover:text-foreground">
-                  Actualités
-                </a>
-              </li>
-              <li>
-                <a href="/#contact" className="text-muted-foreground transition-colors hover:text-foreground">
-                  Contact
+                  L'Actualité
                 </a>
               </li>
             </ul>
@@ -104,7 +109,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; 2024 Renouveau pour la Patrie. Tous droits réservés.</p>
+          <p>&copy; 2024 Doumbouya Président. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

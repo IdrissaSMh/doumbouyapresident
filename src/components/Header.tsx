@@ -7,50 +7,49 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "Accueil", href: "/" },
-    { label: "Biographie", href: "#biographie" },
-    { label: "Programme", href: "#programme" },
-    { label: "Actualités", href: "#actualites" },
-    { label: "Contact", href: "#contact" },
+    { label: "LE CANDIDAT", href: "#candidat" },
+    { label: "L'ALLIANCE", href: "#alliance" },
+    { label: "LE PROGRAMME", href: "#programme" },
+    { label: "LES COMMUNIQUÉS", href: "#communiques" },
+    { label: "L'ACTUALITÉ", href: "#actualites" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-white shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
-              <span className="text-xl font-bold text-primary-foreground">R</span>
+          <Link to="/" className="flex items-center space-x-3">
+            <div className="relative flex h-16 w-16 items-center justify-center">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent via-primary to-accent" />
+              <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-white">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-accent to-primary">
+                  <span className="text-xl font-bold text-white">D</span>
+                </div>
+              </div>
             </div>
-            <span className="hidden text-lg font-bold text-foreground sm:inline-block">
-              Renouveau
-            </span>
+            <div className="flex flex-col leading-none">
+              <span className="text-lg font-bold text-secondary sm:text-xl">DOUMBOUYA</span>
+              <span className="text-lg font-bold text-primary sm:text-xl">PRÉSIDENT</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex md:items-center md:space-x-8">
+          <nav className="hidden lg:flex lg:items-center lg:space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className="text-sm font-semibold uppercase text-foreground transition-colors hover:text-primary"
               >
                 {item.label}
               </a>
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden items-center space-x-4 md:flex">
-            <Button className="bg-accent text-accent-foreground hover:bg-accent/90">
-              Adhérer
-            </Button>
-          </div>
-
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden"
+            className="lg:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -64,21 +63,18 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="border-t border-border py-4 md:hidden">
+          <nav className="border-t border-border py-4 lg:hidden">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                  className="text-sm font-semibold uppercase text-foreground transition-colors hover:text-primary"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
-              <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
-                Adhérer
-              </Button>
             </div>
           </nav>
         )}
