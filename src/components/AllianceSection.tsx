@@ -410,6 +410,62 @@ const AllianceSection = () => {
             </div>
           </div>
         </div>
+
+        {/* Contact et Événements */}
+        <div className="mt-20">
+          <div className="mx-auto mb-12 max-w-4xl text-center">
+            <h3 className="mb-4 text-3xl font-extrabold uppercase text-foreground lg:text-4xl">
+              INFORMATIONS & CONTACT
+            </h3>
+            <div className="mx-auto mb-6 h-1 w-20 bg-primary" />
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-3">
+            {/* Siège */}
+            <Card className="border-2 transition-all hover:border-primary hover:shadow-lg">
+              <CardContent className="p-8 text-center">
+                <div className="mb-4 flex h-16 w-16 mx-auto items-center justify-center rounded-full bg-primary/10">
+                  <Users2 className="h-8 w-8 text-primary" />
+                </div>
+                <h4 className="mb-4 text-xl font-bold text-foreground">Siège de l'Alliance</h4>
+                <p className="text-muted-foreground font-medium">
+                  Kipé Dadia – C/Ratoma
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Contact */}
+            <Card className="border-2 transition-all hover:border-primary hover:shadow-lg">
+              <CardContent className="p-8 text-center">
+                <div className="mb-4 flex h-16 w-16 mx-auto items-center justify-center rounded-full bg-secondary/10">
+                  <Scale className="h-8 w-8 text-secondary" />
+                </div>
+                <h4 className="mb-4 text-xl font-bold text-foreground">Contact</h4>
+                <div className="space-y-2 text-muted-foreground">
+                  <p className="font-medium">+224 628 60 66 75</p>
+                  <p className="font-medium">+224 624 37 21 24</p>
+                  <p className="text-sm italic mt-4">E-mail : contact@adp-guinee.org</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Événement à venir */}
+            <Card className="border-2 border-accent/20 bg-gradient-to-br from-accent/5 to-transparent transition-all hover:border-accent hover:shadow-lg">
+              <CardContent className="p-8 text-center">
+                <div className="mb-4 flex h-16 w-16 mx-auto items-center justify-center rounded-full bg-accent/10">
+                  <CheckCircle2 className="h-8 w-8 text-accent" />
+                </div>
+                <h4 className="mb-4 text-xl font-bold text-foreground">Événement à venir</h4>
+                <div className="space-y-2">
+                  <p className="text-lg font-semibold text-accent">Lancement des activités</p>
+                  <p className="text-muted-foreground font-medium">Jeudi 20 Novembre 2025</p>
+                  <p className="text-muted-foreground">À partir de 9h</p>
+                  <p className="text-sm text-muted-foreground italic mt-2">Au siège de l'Alliance</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
       </div>
     </section>
   );
