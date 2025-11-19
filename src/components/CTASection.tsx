@@ -7,7 +7,7 @@ const CTASection = () => {
     <section className="bg-gradient-to-br from-primary to-primary/80 py-20 lg:py-32">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="mb-6 text-4xl font-bold text-primary-foreground lg:text-5xl">
+          <h2 className="mb-6 text-4xl font-bold uppercase text-primary-foreground lg:text-5xl">
             Rejoignez le Mouvement
           </h2>
           
@@ -27,7 +27,7 @@ const CTASection = () => {
             </div>
             <Button 
               size="lg"
-              className="h-12 bg-accent text-accent-foreground hover:bg-accent/90"
+              className="h-12 bg-secondary text-secondary-foreground hover:bg-secondary/90"
             >
               S'inscrire
             </Button>

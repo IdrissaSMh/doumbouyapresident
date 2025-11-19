@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 
 const AboutSection = () => {
   return (
-    <section id="biographie" className="py-20 lg:py-32">
+    <section id="candidat" className="py-20 lg:py-32">
       <div className="container mx-auto px-4">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Image */}
@@ -19,8 +19,8 @@ const AboutSection = () => {
           {/* Content */}
           <div className="order-1 flex flex-col justify-center space-y-6 lg:order-2">
             <div className="space-y-4">
-              <h2 className="text-4xl font-bold text-foreground lg:text-5xl">
-                Une Vision pour l'Avenir
+              <h2 className="text-4xl font-bold uppercase text-foreground lg:text-5xl">
+                Le Candidat
               </h2>
               <div className="h-1 w-20 bg-secondary" />
             </div>
