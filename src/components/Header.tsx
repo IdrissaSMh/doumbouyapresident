@@ -13,6 +13,7 @@ const Header = () => {
     { label: "LE PROGRAMME", href: "/programme" },
     { label: "LES COMMUNIQUÉS", href: "/communiques" },
     { label: "L'ACTUALITÉ", href: "/actualites" },
+    { label: "ÉVÉNEMENTS", href: "/evenements" },
   ];
 
   return (
