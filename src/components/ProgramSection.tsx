@@ -1,5 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap, Heart, Briefcase, Sprout, Shield } from "lucide-react";
+import pilier1 from "@/assets/pilier-1.png";
+import pilier2 from "@/assets/pilier-2.png";
+import pilier3 from "@/assets/pilier-3.png";
+import pilier4 from "@/assets/pilier-4.png";
+import pilier5 from "@/assets/pilier-5.png";
 
 const ProgramSection = () => {
   const programs = [
@@ -103,9 +108,28 @@ const ProgramSection = () => {
 
         {/* Projet Simandou 2040 */}
         <div className="mt-24">
+          {/* Images des 5 piliers */}
+          <div className="mb-12 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
+            <div className="animate-fade-in">
+              <img src={pilier1} alt="Pilier 1 - Agriculture" className="w-full h-auto rounded-lg shadow-lg transition-transform hover:scale-105" />
+            </div>
+            <div className="animate-fade-in" style={{ animationDelay: '100ms' }}>
+              <img src={pilier2} alt="Pilier 2 - Éducation" className="w-full h-auto rounded-lg shadow-lg transition-transform hover:scale-105" />
+            </div>
+            <div className="animate-fade-in" style={{ animationDelay: '200ms' }}>
+              <img src={pilier3} alt="Pilier 3 - Infrastructures" className="w-full h-auto rounded-lg shadow-lg transition-transform hover:scale-105" />
+            </div>
+            <div className="animate-fade-in" style={{ animationDelay: '300ms' }}>
+              <img src={pilier4} alt="Pilier 4 - Économie" className="w-full h-auto rounded-lg shadow-lg transition-transform hover:scale-105" />
+            </div>
+            <div className="animate-fade-in" style={{ animationDelay: '400ms' }}>
+              <img src={pilier5} alt="Pilier 5 - Santé" className="w-full h-auto rounded-lg shadow-lg transition-transform hover:scale-105" />
+            </div>
+          </div>
+
           <div className="mx-auto mb-12 max-w-3xl text-center">
-            <h3 className="mb-4 text-3xl font-bold text-foreground lg:text-4xl">
-              Projet Simandou 2040
+            <h3 className="mb-4 text-3xl font-extrabold uppercase text-foreground lg:text-4xl">
+              LES 5 PILIERS DU PROJET SIMANDOU 2040
             </h3>
             <div className="mx-auto mb-6 h-1 w-20 bg-primary" />
             <p className="text-lg text-muted-foreground">
