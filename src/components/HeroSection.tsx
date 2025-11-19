@@ -4,20 +4,23 @@ import logoAdp from "@/assets/logo-adp.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative flex min-h-[calc(100vh-5rem)] items-center justify-center overflow-hidden">
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+    <section className="flex min-h-[calc(100vh-5rem)] flex-col overflow-hidden">
+      {/* Image du candidat */}
+      <div className="relative h-[60vh] w-full">
+        <img 
+          src={heroImage} 
+          alt="Président Mamadi Doumbouya" 
+          className="h-full w-full object-cover object-top"
+        />
       </div>
       
-      <div className="container relative z-10 mx-auto px-4 py-20">
-        <div className="mx-auto max-w-4xl space-y-12 text-center">
+      {/* Contenu en bas */}
+      <div className="container mx-auto px-4 py-12 lg:py-16">
+        <div className="mx-auto max-w-4xl space-y-8 text-center">
           {/* Logo ADP */}
           <div className="flex justify-center">
-            <div className="relative flex h-48 w-48 items-center justify-center md:h-56 md:w-56">
-              <div className="absolute inset-0 animate-pulse rounded-full bg-white/20 blur-2xl" />
+            <div className="relative flex h-32 w-32 items-center justify-center md:h-40 md:w-40">
+              <div className="absolute inset-0 animate-pulse rounded-full bg-primary/10 blur-2xl" />
               <img 
                 src={logoAdp} 
                 alt="ADP Alliance Doumbouya Président" 
@@ -26,14 +29,14 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="space-y-6">
-            <h1 className="text-5xl font-bold leading-tight text-white sm:text-6xl md:text-7xl lg:text-8xl">
-              <span className="text-secondary drop-shadow-lg">DOUMBOUYA</span>
+          <div className="space-y-4">
+            <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl lg:text-7xl">
+              <span className="text-secondary">DOUMBOUYA</span>
               <br />
-              <span className="text-primary drop-shadow-lg">PRÉSIDENT</span>
+              <span className="text-primary">PRÉSIDENT</span>
             </h1>
             
-            <p className="mx-auto max-w-3xl text-xl font-semibold text-white drop-shadow-lg md:text-2xl lg:text-3xl">
+            <p className="mx-auto max-w-3xl text-lg font-semibold md:text-xl lg:text-2xl">
               POUR BÂTIR UNE GUINÉE ÉMERGENTE ET PROSPÈRE
             </p>
           </div>
