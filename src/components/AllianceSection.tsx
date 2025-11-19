@@ -232,6 +232,184 @@ const AllianceSection = () => {
             </Card>
           </div>
         </div>
+
+        {/* Liste des formations politiques et mouvements */}
+        <div className="mt-20">
+          <div className="mx-auto mb-12 max-w-4xl text-center">
+            <h3 className="mb-4 text-3xl font-extrabold uppercase text-foreground lg:text-4xl">
+              LA LISTE DES FORMATIONS POLITIQUES ET MOUVEMENTS
+            </h3>
+            <div className="mx-auto mb-6 h-1 w-20 bg-primary" />
+          </div>
+
+          {/* Partis Politiques */}
+          <div className="mb-16">
+            <h4 className="mb-6 text-2xl font-bold text-primary uppercase">PARTIS POLITIQUES</h4>
+            <div className="overflow-x-auto rounded-lg border border-border shadow-lg">
+              <table className="w-full bg-card">
+                <thead className="bg-primary text-primary-foreground">
+                  <tr>
+                    <th className="px-4 py-3 text-left text-sm font-semibold">N°</th>
+                    <th className="px-4 py-3 text-left text-sm font-semibold">FORMATIONS POLITIQUES</th>
+                    <th className="px-4 py-3 text-left text-sm font-semibold">SIGLE</th>
+                    <th className="px-4 py-3 text-left text-sm font-semibold">NOMS DES LEADERS</th>
+                    <th className="px-4 py-3 text-left text-sm font-semibold">CONTACTS</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border">
+                  <tr className="hover:bg-muted/50 transition-colors">
+                    <td className="px-4 py-3 text-sm">1</td>
+                    <td className="px-4 py-3 text-sm font-medium">Union des Forces du Changement</td>
+                    <td className="px-4 py-3 text-sm">UFC</td>
+                    <td className="px-4 py-3 text-sm">Aboubacar SYLLA</td>
+                    <td className="px-4 py-3 text-sm">622 16 64 69</td>
+                  </tr>
+                  <tr className="hover:bg-muted/50 transition-colors">
+                    <td className="px-4 py-3 text-sm">2</td>
+                    <td className="px-4 py-3 text-sm font-medium">Parti Démocratique de Guinée</td>
+                    <td className="px-4 py-3 text-sm">PDG-RDA</td>
+                    <td className="px-4 py-3 text-sm">Mangamory BANGOURA</td>
+                    <td className="px-4 py-3 text-sm">621 44 06 87</td>
+                  </tr>
+                  <tr className="hover:bg-muted/50 transition-colors">
+                    <td className="px-4 py-3 text-sm">3</td>
+                    <td className="px-4 py-3 text-sm font-medium">Alternance Démocratique pour le Changement-Bloc de l'Opposition Constructive</td>
+                    <td className="px-4 py-3 text-sm">ADC-BOC</td>
+                    <td className="px-4 py-3 text-sm">Ibrahima Sory DIALLO</td>
+                    <td className="px-4 py-3 text-sm">622 13 97 37</td>
+                  </tr>
+                  <tr className="hover:bg-muted/50 transition-colors">
+                    <td className="px-4 py-3 text-sm">4</td>
+                    <td className="px-4 py-3 text-sm font-medium">Parti Républicain et de la Renaissance</td>
+                    <td className="px-4 py-3 text-sm">PRR</td>
+                    <td className="px-4 py-3 text-sm">-</td>
+                    <td className="px-4 py-3 text-sm">-</td>
+                  </tr>
+                  <tr className="hover:bg-muted/50 transition-colors">
+                    <td className="px-4 py-3 text-sm">5</td>
+                    <td className="px-4 py-3 text-sm font-medium">Union Nationale Démocratique de Guinée</td>
+                    <td className="px-4 py-3 text-sm">UNDG</td>
+                    <td className="px-4 py-3 text-sm">Dr Younoussa KOITA</td>
+                    <td className="px-4 py-3 text-sm">622 20 10 24</td>
+                  </tr>
+                  <tr className="hover:bg-muted/50 transition-colors">
+                    <td className="px-4 py-3 text-sm">6</td>
+                    <td className="px-4 py-3 text-sm font-medium">Parti de l'Union pour le Développement Intégré de la Guinée</td>
+                    <td className="px-4 py-3 text-sm">PUDIG</td>
+                    <td className="px-4 py-3 text-sm">Dr Souleymane BANGOURA</td>
+                    <td className="px-4 py-3 text-sm">625 73 97 47</td>
+                  </tr>
+                  <tr className="hover:bg-muted/50 transition-colors">
+                    <td className="px-4 py-3 text-sm">7</td>
+                    <td className="px-4 py-3 text-sm font-medium">Nouvel Avenir de Guinée</td>
+                    <td className="px-4 py-3 text-sm">NAG</td>
+                    <td className="px-4 py-3 text-sm">Alsény Kolia SYLLA</td>
+                    <td className="px-4 py-3 text-sm">628 54 68 69</td>
+                  </tr>
+                  <tr className="hover:bg-muted/50 transition-colors">
+                    <td className="px-4 py-3 text-sm">8</td>
+                    <td className="px-4 py-3 text-sm font-medium">Union des Forces Nouvelles de Guinée</td>
+                    <td className="px-4 py-3 text-sm">UFNG</td>
+                    <td className="px-4 py-3 text-sm">Aboubacar Sénateur DIALLO</td>
+                    <td className="px-4 py-3 text-sm">622 42 48 50</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Mouvements et Associations */}
+          <div>
+            <h4 className="mb-6 text-2xl font-bold text-secondary uppercase">MOUVEMENTS ET ASSOCIATIONS</h4>
+            <div className="overflow-x-auto rounded-lg border border-border shadow-lg">
+              <table className="w-full bg-card">
+                <thead className="bg-secondary text-secondary-foreground">
+                  <tr>
+                    <th className="px-4 py-3 text-left text-sm font-semibold">N°</th>
+                    <th className="px-4 py-3 text-left text-sm font-semibold">MOUVEMENTS</th>
+                    <th className="px-4 py-3 text-left text-sm font-semibold">SIGLE</th>
+                    <th className="px-4 py-3 text-left text-sm font-semibold">NOMS DES LEADERS</th>
+                    <th className="px-4 py-3 text-left text-sm font-semibold">CONTACTS</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border">
+                  {[
+                    { n: 1, nom: "Centre de Réflexions pour le Développement de Macenta", sigle: "CREDEM", leader: "Alain BILIVOGUI", contact: "627 80 80 58" },
+                    { n: 2, nom: "Mouvement Guinée Unie", sigle: "-", leader: "-", contact: "-" },
+                    { n: 3, nom: "Coordination des Jeunes Diplomates", sigle: "CJD", leader: "Mohamed KAMANO", contact: "627 22 74 56" },
+                    { n: 4, nom: "Guinée Wakhonfé pour le progrès", sigle: "GWP", leader: "Mohamed Lamine BANGOURA", contact: "621 38 77 17" },
+                    { n: 5, nom: "Mouvement des Patriotes de Guinée", sigle: "MPG", leader: "Noumandjan TRAORE", contact: "628 59 34 76" },
+                    { n: 6, nom: "Alliance pour la Bonne Cause", sigle: "ABG", leader: "Mamady TERE", contact: "628 18 77 89" },
+                    { n: 7, nom: "Coalition des sèrès et associations pour le Développement", sigle: "COSADEN", leader: "Sekouba CONDE", contact: "628 81 70 21" },
+                    { n: 8, nom: "Bloc des Mouvements", sigle: "BM", leader: "Pierre LENO", contact: "612 54 54 19" },
+                    { n: 9, nom: "Groupe Madame SOUMAH", sigle: "-", leader: "Marie José BANGOURA", contact: "629 33 95 82" },
+                    { n: 10, nom: "Président Mamadi DOUMBOUYA Soboty", sigle: "-", leader: "Marissa BANGOURA", contact: "622 21 13 40" },
+                    { n: 11, nom: "Groupe Kakimbo KIPE", sigle: "-", leader: "Mariame CISSE", contact: "628 18 55 88" },
+                    { n: 12, nom: "Groupe Fatou BARRY", sigle: "-", leader: "Fatou BARRY", contact: "629 84 97 85" },
+                    { n: 13, nom: "Groupe Baga Guinè", sigle: "-", leader: "Céline BANGOURA", contact: "627 49 87 38" },
+                    { n: 14, nom: "Les Femmes Dynamiques", sigle: "-", leader: "Hadja Mariama ciré CAMARA", contact: "625 95 69 76" },
+                    { n: 15, nom: "To Sogué Mamadi na non mah", sigle: "-", leader: "Mariame BANGOURA", contact: "621 57 54 19" },
+                    { n: 16, nom: "Groupe Salé DIALLO", sigle: "-", leader: "Salématou DIALLO", contact: "625 03 80 13" },
+                    { n: 17, nom: "Groupe M'Balia CAMARA", sigle: "-", leader: "M'Balia CAMARA", contact: "627 17 90 16" },
+                    { n: 18, nom: "Groupe Tanti Fèntèhi", sigle: "-", leader: "Hadjiratou CAMARA", contact: "623 04 93 12" },
+                    { n: 19, nom: "Groupe Cimembossiah", sigle: "-", leader: "Kadiatou BANGOURA", contact: "628 28 67 85" },
+                    { n: 20, nom: "Groupe Langni Gnonwou", sigle: "-", leader: "Fatoumata NABE", contact: "612 32 56 81" },
+                    { n: 21, nom: "LA Beauté", sigle: "-", leader: "M'Mah SYLLA", contact: "625 56 93 58" },
+                    { n: 22, nom: "Agir pour le Développement Durable", sigle: "-", leader: "M'mah CISSE", contact: "621 09 95 30" },
+                    { n: 23, nom: "Groupe Oumou Malick CAMARA", sigle: "-", leader: "Oumou Malick CAMARA", contact: "622 61 65 01" },
+                    { n: 24, nom: "Les Femmes Leaders de Madina", sigle: "-", leader: "Fanta DIALLO", contact: "621 89 95 18" },
+                    { n: 25, nom: "Groupe Rosaline THEA", sigle: "-", leader: "Rosaline THEA", contact: "620 42 10 58" },
+                    { n: 26, nom: "Association des filles d'El hadj Aboubacar KEIRA", sigle: "-", leader: "Aicha CAMARA", contact: "620 61 67 96" },
+                    { n: 27, nom: "Si c'est pas lui, c'est qui ?", sigle: "-", leader: "Marie AGNES", contact: "628 16 88 97" },
+                    { n: 28, nom: "RATOMAFEE", sigle: "-", leader: "Aminata SAKHO", contact: "625 27 71 98" },
+                    { n: 29, nom: "Coordination Dynamiques des guinéens pour le soutien des actions du chef de l'Etat", sigle: "-", leader: "Mamadou Saliou KEITA", contact: "629 77 45 71" },
+                    { n: 30, nom: "Groupe Mafèrin KEITA", sigle: "-", leader: "Mafèrin KEITA", contact: "625 59 33 60" },
+                    { n: 31, nom: "Groupe Foulématou CAMARA", sigle: "-", leader: "Foulématou CAMARA", contact: "625 48 94 65" },
+                    { n: 32, nom: "Groupe Fatou BANGOURA", sigle: "-", leader: "Fatou BANGOURA", contact: "622 85 62 55" },
+                    { n: 33, nom: "Groupe DG", sigle: "-", leader: "Doussou GUILAVOGUI", contact: "628 73 50 61" },
+                    { n: 34, nom: "Groupe AMINATA CAMARA", sigle: "-", leader: "AMINATA CAMARA", contact: "628 05 86 17" },
+                    { n: 35, nom: "Lumière de la République", sigle: "LDR", leader: "Seny CAMARA", contact: "624 50 08 43" },
+                    { n: 36, nom: "Jeunes Leaders de Kipé", sigle: "JLK", leader: "Ibrahima Sory CONDE", contact: "626 27 92 09" },
+                    { n: 37, nom: "Mouvement des Jeunes Patriotes la Refondation", sigle: "-", leader: "Aboubacar CONTE", contact: "612 93 76 48" },
+                    { n: 38, nom: "Mouvement des Dynamiques de la BELLEVUE", sigle: "-", leader: "Mohamed Lamine Fodé BANGOURA", contact: "625 51 88 81" },
+                    { n: 39, nom: "Base LENO", sigle: "-", leader: "Sanoussy KALABANE", contact: "626 11 74 26" },
+                    { n: 40, nom: "Association Familly", sigle: "-", leader: "Mohamed Lamine CAMARA", contact: "611 72 01 52" },
+                    { n: 41, nom: "Mouvement des Leaders Yimbayah", sigle: "-", leader: "Alsény CONTE", contact: "627 23 54 33" },
+                    { n: 42, nom: "Wakilily KIPE", sigle: "-", leader: "Mabinty CAMARA", contact: "623 99 73 14" },
+                    { n: 43, nom: "Femmes Leaders de Sambaya", sigle: "-", leader: "Mariama Sadjo BARRY", contact: "620 45 55 84" },
+                    { n: 44, nom: "Taouya ma Fierté", sigle: "-", leader: "Fatou DOUMBOUYA", contact: "622 05 41 09" },
+                    { n: 45, nom: "Etats-Unis de Ratoma", sigle: "-", leader: "Yaya KEITA", contact: "610 29 55 22" },
+                    { n: 46, nom: "Mouvement Dabondy 2", sigle: "-", leader: "Alsény DIALLO", contact: "622 55 51 89" },
+                    { n: 47, nom: "Groupe Fatou SOUMAH", sigle: "-", leader: "Fatou SOUMAH", contact: "622 97 34 93" },
+                    { n: 48, nom: "Star Unie", sigle: "-", leader: "Djibril Gongoly SOUMAH", contact: "629 49 58 03" },
+                    { n: 49, nom: "Banc Bleu", sigle: "-", leader: "Alphonse YOMBA", contact: "623 59 42 69" },
+                    { n: 50, nom: "Base CASSIA", sigle: "-", leader: "Sékou CAMARA", contact: "625 21 43 47" },
+                    { n: 51, nom: "Mouvement Sama de Yimbaya", sigle: "-", leader: "Sékou KABA", contact: "624 24 68 65" },
+                    { n: 52, nom: "Mouvement Soleil de Sangoyah", sigle: "-", leader: "Ousmane SOUMAH", contact: "627 65 23 06" },
+                    { n: 53, nom: "Femmes capables", sigle: "-", leader: "Aicha CAMARA", contact: "625 49 17 03" },
+                    { n: 54, nom: "Base Tougoubougny", sigle: "-", leader: "Hamidou TRAORE", contact: "626 41 66 44" },
+                    { n: 55, nom: "Tout TAOUYAH", sigle: "-", leader: "Hadja Gata SOUMAH", contact: "629 27 29 77" },
+                    { n: 56, nom: "Mouvement TKC", sigle: "-", leader: "Kabinet KABA", contact: "611 13 43 37" },
+                    { n: 57, nom: "Groupement Avaria", sigle: "-", leader: "Mamassa Avaria SOUMAH", contact: "622 63 55 98" },
+                    { n: 58, nom: "Groupe Friperie", sigle: "-", leader: "M'Balou KABA", contact: "623 64 57 22" },
+                    { n: 59, nom: "Doymbouya na non mah", sigle: "-", leader: "Oumar KABA", contact: "620 10 72 71" },
+                    { n: 60, nom: "Mouvement Batomba wax", sigle: "-", leader: "Hadja Mariama Ciré CISSE", contact: "628 92 92 96" },
+                    { n: 61, nom: "Mouvement Africof", sigle: "-", leader: "Mamassata SOUMAH", contact: "624 39 02 74" },
+                    { n: 62, nom: "Mouvement des femmes Leaders de KIPE", sigle: "-", leader: "Hilal Bintou KEITA", contact: "622 39 57 02" },
+                  ].map((item, idx) => (
+                    <tr key={idx} className="hover:bg-muted/50 transition-colors">
+                      <td className="px-4 py-3 text-sm">{item.n}</td>
+                      <td className="px-4 py-3 text-sm font-medium">{item.nom}</td>
+                      <td className="px-4 py-3 text-sm">{item.sigle}</td>
+                      <td className="px-4 py-3 text-sm">{item.leader}</td>
+                      <td className="px-4 py-3 text-sm">{item.contact}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
