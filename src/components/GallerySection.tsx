@@ -145,40 +145,51 @@ const GallerySection = () => {
 
         {/* Grille de médias (photos et vidéos) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.map((item) => (
+          {filteredItems.map((item, index) => (
             <div
               key={item.id}
-              className="group relative overflow-hidden rounded-lg cursor-pointer transition-transform duration-300 hover:scale-105 shadow-lg"
+              className="group flex flex-col overflow-hidden rounded-lg cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-lg bg-card animate-fade-in"
+              style={{ animationDelay: `${index * 100}ms` }}
               onClick={() => setSelectedImage(item)}
             >
-              {item.type === "video" ? (
-                <div className="relative w-full h-64 bg-black">
-                  <video
-                    src={item.video}
-                    className="w-full h-full object-cover"
-                    muted
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/40">
-                    <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center animate-pulse">
-                      <Play className="w-8 h-8 text-primary-foreground ml-1" fill="currentColor" />
+              <div className="relative overflow-hidden">
+                {item.type === "video" ? (
+                  <div className="relative w-full h-64 bg-black">
+                    <video
+                      src={item.video}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      muted
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+                      <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center animate-pulse group-hover:scale-110 transition-transform">
+                        <Play className="w-8 h-8 text-primary-foreground ml-1" fill="currentColor" />
+                      </div>
+                    </div>
+                    <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold shadow-lg">
+                      VIDÉO
                     </div>
                   </div>
-                  <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold">
-                    VIDÉO
-                  </div>
+                ) : (
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                )}
+              </div>
+              
+              <div className="p-4 bg-card border-t border-border">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-lg font-bold text-foreground line-clamp-2 flex-1">
+                    {item.title}
+                  </h3>
+                  <span className="text-xs text-muted-foreground ml-2 whitespace-nowrap">
+                    {item.date}
+                  </span>
                 </div>
-              ) : (
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-64 object-cover"
-                />
-              )}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-200">{item.date}</p>
-                </div>
+                <p className="text-sm text-muted-foreground line-clamp-2">
+                  {item.description}
+                </p>
               </div>
             </div>
           ))}
