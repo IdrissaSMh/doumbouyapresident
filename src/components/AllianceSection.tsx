@@ -1,6 +1,23 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Target, Scale, Users2, CheckCircle2 } from "lucide-react";
 import presidentAllianceImg from "@/assets/president-alliance.jpg";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import alliance1 from "@/assets/alliance-1.jpg";
+import alliance2 from "@/assets/alliance-2.jpg";
+import alliance3 from "@/assets/alliance-3.jpg";
+import alliance4 from "@/assets/alliance-4.jpg";
+import alliance5 from "@/assets/alliance-5.jpg";
+import alliance6 from "@/assets/alliance-6.jpg";
+import alliance7 from "@/assets/alliance-7.jpg";
+import alliance8 from "@/assets/alliance-8.jpg";
+import alliance9 from "@/assets/alliance-9.jpg";
+import alliance10 from "@/assets/alliance-10.jpg";
 
 const AllianceSection = () => {
   const visionPoints = [
@@ -117,6 +134,51 @@ const AllianceSection = () => {
               </Card>
             ))}
           </div>
+        </div>
+
+        {/* Galerie Photo */}
+        <div className="mb-20">
+          <h3 className="mb-12 text-center text-3xl font-bold text-foreground lg:text-4xl">
+            Galerie Photo de l'Alliance
+          </h3>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="mx-auto w-full max-w-6xl"
+          >
+            <CarouselContent>
+              {[
+                alliance1,
+                alliance2,
+                alliance3,
+                alliance4,
+                alliance5,
+                alliance6,
+                alliance7,
+                alliance8,
+                alliance9,
+                alliance10,
+              ].map((img, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-2">
+                    <Card className="overflow-hidden border-2 transition-all hover:shadow-xl hover:scale-105">
+                      <CardContent className="p-0">
+                        <img
+                          src={img}
+                          alt={`Alliance ${index + 1}`}
+                          className="aspect-square w-full object-cover transition-transform duration-300"
+                        />
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-2" />
+            <CarouselNext className="right-2" />
+          </Carousel>
         </div>
 
         {/* Président de l'Alliance */}
