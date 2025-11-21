@@ -146,61 +146,6 @@ const AllianceSection = () => {
           </div>
         </div>
 
-        {/* Galerie Photo */}
-        <div className="mb-20">
-          <h3 className="mb-12 text-center text-3xl font-bold text-foreground lg:text-4xl">
-            Galerie Photo de l'Alliance
-          </h3>
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="mx-auto w-full max-w-6xl"
-          >
-            <CarouselContent>
-              {[
-                alliance1,
-                alliance2,
-                alliance3,
-                alliance4,
-                alliance5,
-                alliance6,
-                alliance7,
-                alliance8,
-                alliance9,
-                alliance10,
-                alliance11,
-                alliance12,
-                alliance13,
-                alliance14,
-                alliance15,
-                alliance16,
-                alliance17,
-                alliance18,
-                alliance19,
-                alliance20,
-              ].map((img, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <Card className="overflow-hidden border-2 transition-all hover:shadow-xl hover:scale-105">
-                      <CardContent className="p-0">
-                        <img
-                          src={img}
-                          alt={`Alliance ${index + 1}`}
-                          className="aspect-square w-full object-cover transition-transform duration-300"
-                        />
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-2" />
-            <CarouselNext className="right-2" />
-          </Carousel>
-        </div>
-
         {/* Président de l'Alliance */}
         <div className="bg-muted/30 rounded-lg p-8 lg:p-12">
           <h3 className="mb-12 text-center text-3xl font-bold text-foreground lg:text-4xl">
@@ -547,6 +492,61 @@ const AllianceSection = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+
+        {/* Galerie Photo */}
+        <div className="mb-20">
+          <h3 className="mb-12 text-center text-3xl font-bold text-foreground lg:text-4xl">
+            Galerie Photo de l'Alliance
+          </h3>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="mx-auto w-full max-w-6xl"
+          >
+            <CarouselContent>
+              {[
+                alliance1,
+                alliance2,
+                alliance3,
+                alliance4,
+                alliance5,
+                alliance6,
+                alliance7,
+                alliance8,
+                alliance9,
+                alliance10,
+                alliance11,
+                alliance12,
+                alliance13,
+                alliance14,
+                alliance15,
+                alliance16,
+                alliance17,
+                alliance18,
+                alliance19,
+                alliance20,
+              ].map((img, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-2">
+                    <Card className="overflow-hidden border-2 transition-all hover:shadow-xl hover:scale-105">
+                      <CardContent className="p-0">
+                        <img
+                          src={img}
+                          alt={`Alliance ${index + 1}`}
+                          className="aspect-square w-full object-cover transition-transform duration-300"
+                        />
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-2" />
+            <CarouselNext className="right-2" />
+          </Carousel>
         </div>
       </div>
     </section>
