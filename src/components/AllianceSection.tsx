@@ -18,6 +18,16 @@ import alliance7 from "@/assets/alliance-7.jpg";
 import alliance8 from "@/assets/alliance-8.jpg";
 import alliance9 from "@/assets/alliance-9.jpg";
 import alliance10 from "@/assets/alliance-10.jpg";
+import alliance11 from "@/assets/alliance-11.jpg";
+import alliance12 from "@/assets/alliance-12.jpg";
+import alliance13 from "@/assets/alliance-13.jpg";
+import alliance14 from "@/assets/alliance-14.jpg";
+import alliance15 from "@/assets/alliance-15.jpg";
+import alliance16 from "@/assets/alliance-16.jpg";
+import alliance17 from "@/assets/alliance-17.jpg";
+import alliance18 from "@/assets/alliance-18.jpg";
+import alliance19 from "@/assets/alliance-19.jpg";
+import alliance20 from "@/assets/alliance-20.jpg";
 
 const AllianceSection = () => {
   const visionPoints = [
@@ -160,6 +170,16 @@ const AllianceSection = () => {
                 alliance8,
                 alliance9,
                 alliance10,
+                alliance11,
+                alliance12,
+                alliance13,
+                alliance14,
+                alliance15,
+                alliance16,
+                alliance17,
+                alliance18,
+                alliance19,
+                alliance20,
               ].map((img, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-2">
