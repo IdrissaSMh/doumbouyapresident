@@ -4,14 +4,29 @@ import { Calendar } from "lucide-react";
 const NewsSection = () => {
   const news = [
     {
+      title: "L'Alliance Doumbouya Président organise sa convention nationale au siège de l'UFC",
+      date: "20 Novembre 2025",
+      excerpt: "L'Alliance Doumbouya Président (ADP) a tenu ce jeudi 20 novembre 2025 sa convention nationale au siège de l'Union des Forces du Changement (UFC), situé à Kipé Dadia. Placée sous la présidence de M. Aboubacar Sylla, leader de l'UFC et de l'ADP, la rencontre a mobilisé des représentants d'une trentaine de partis politiques, des organisations de la société civile et près d'une centaine de mouvements de soutien.",
+      fullContent: `L'Alliance Doumbouya Président (ADP) a tenu ce jeudi 20 novembre 2025 sa convention nationale au siège de l'Union des Forces du Changement (UFC), situé à Kipé Dadia. Placée sous la présidence de M. Aboubacar Sylla, leader de l'UFC et de l'ADP, la rencontre a mobilisé des représentants d'une trentaine de partis politiques, des organisations de la société civile et près d'une centaine de mouvements de soutien.
+
+Cette convention constitue une étape clé dans la mise en place d'une stratégie nationale en vue de l'élection présidentielle prévue pour le 28 décembre 2025.
+
+Créée pour rassembler plusieurs forces politiques et sociales, l'ADP vise une mobilisation populaire « massive et structurée » autour de la candidature du président Mamadi Doumbouya. La diversité des organisations présentes traduit, selon les initiateurs, une volonté de bâtir un front politique et citoyen en faveur du Candidat de la Génération de la Modernité pour le Développement (GMD).
+
+Dans son discours, le président de l'Alliance, M. Aboubacar Sylla, a souligné les enjeux de cette mobilisation nationale. Il a insisté sur la nécessité d'obtenir une victoire « claire, démocratique et incontestable » lors du scrutin présidentiel.
+
+« Notre mission est de mobiliser, d'organiser et de rassembler le peuple guinéen autour de la candidature du président Mamadi Doumbouya. Nous devons unir nos forces, structurer notre action et multiplier les initiatives de proximité pour garantir la victoire le 28 décembre 2025 », a-t-il déclaré, dans une intervention chaleureusement applaudie.
+
+Le Président de l'Alliance a également appelé les structures membres à renforcer leur présence sur l'ensemble du territoire, invitant à intensifier les actions de terrain.
+
+Les travaux ont permis de réaffirmer la vision politique défendue par l'Alliance, dont la charte projette l'avènement d'une Guinée nouvelle à l'horizon 2040.
+
+En clôturant la rencontre, le président de l'ADP a invité les militants à « faire de cette présidentielle un moment d'unité et de sursaut national », tout en rappelant que « la Guinée se trouve à un tournant décisif de son histoire ».`,
+    },
+    {
       title: "Formation officielle de l'Alliance Doumbouya Président",
       date: "Novembre 2025",
       excerpt: "Signature historique de l'accord entre les principales formations politiques guinéennes pour soutenir la candidature du Président Mamadi Doumbouya.",
-    },
-    {
-      title: "Convention de l'Alliance prévue le 20 Novembre 2025",
-      date: "20 Novembre 2025",
-      excerpt: "Lancement officiel des activités de l'Alliance à Kipé Dadia, Commune de Ratoma. Un moment décisif pour la mobilisation nationale.",
     },
     {
       title: "Mobilisation massive des structures alliées",
