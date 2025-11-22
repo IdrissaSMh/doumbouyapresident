@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Shield, Target, Scale, Users2, CheckCircle2 } from "lucide-react";
+import { Shield, Target, Scale, Users2, CheckCircle2, Download, X, ChevronLeft, ChevronRight } from "lucide-react";
 import presidentAllianceImg from "@/assets/president-alliance.jpg";
 import {
   Carousel,
@@ -8,6 +8,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
 import alliance1 from "@/assets/alliance-1.jpg";
 import alliance2 from "@/assets/alliance-2.jpg";
 import alliance3 from "@/assets/alliance-3.jpg";
@@ -30,6 +33,52 @@ import alliance19 from "@/assets/alliance-19.jpg";
 import alliance20 from "@/assets/alliance-20.jpg";
 
 const AllianceSection = () => {
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  
+  const galleryImages = [
+    alliance1,
+    alliance2,
+    alliance3,
+    alliance4,
+    alliance5,
+    alliance6,
+    alliance7,
+    alliance8,
+    alliance9,
+    alliance10,
+    alliance11,
+    alliance12,
+    alliance13,
+    alliance14,
+    alliance15,
+    alliance16,
+    alliance17,
+    alliance18,
+    alliance19,
+    alliance20,
+  ];
+
+  const handleDownload = (imageUrl: string, index: number) => {
+    const link = document.createElement('a');
+    link.href = imageUrl;
+    link.download = `alliance-photo-${index + 1}.jpg`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handlePrevImage = () => {
+    if (selectedImage !== null) {
+      setSelectedImage((selectedImage - 1 + galleryImages.length) % galleryImages.length);
+    }
+  };
+
+  const handleNextImage = () => {
+    if (selectedImage !== null) {
+      setSelectedImage((selectedImage + 1) % galleryImages.length);
+    }
+  };
+
   const visionPoints = [
     "Une souveraineté nationale renforcée",
     "La prospérité partagée et le développement durable",
@@ -507,37 +556,24 @@ const AllianceSection = () => {
             className="mx-auto w-full max-w-6xl"
           >
             <CarouselContent>
-              {[
-                alliance1,
-                alliance2,
-                alliance3,
-                alliance4,
-                alliance5,
-                alliance6,
-                alliance7,
-                alliance8,
-                alliance9,
-                alliance10,
-                alliance11,
-                alliance12,
-                alliance13,
-                alliance14,
-                alliance15,
-                alliance16,
-                alliance17,
-                alliance18,
-                alliance19,
-                alliance20,
-              ].map((img, index) => (
+              {galleryImages.map((img, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-2">
-                    <Card className="overflow-hidden border-2 transition-all hover:shadow-xl hover:scale-105">
-                      <CardContent className="p-0">
+                    <Card 
+                      className="group overflow-hidden border-2 cursor-pointer transition-all hover:shadow-xl hover:scale-105"
+                      onClick={() => setSelectedImage(index)}
+                    >
+                      <CardContent className="relative p-0">
                         <img
                           src={img}
                           alt={`Alliance ${index + 1}`}
                           className="aspect-square w-full object-cover transition-transform duration-300"
                         />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                          <p className="text-white text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            Cliquez pour agrandir
+                          </p>
+                        </div>
                       </CardContent>
                     </Card>
                   </div>
@@ -547,6 +583,69 @@ const AllianceSection = () => {
             <CarouselPrevious className="left-2" />
             <CarouselNext className="right-2" />
           </Carousel>
+
+          {/* Dialog Lightbox */}
+          <Dialog open={selectedImage !== null} onOpenChange={() => setSelectedImage(null)}>
+            <DialogContent className="max-w-7xl w-[95vw] p-0 bg-black/95 border-none">
+              {selectedImage !== null && (
+                <div className="relative">
+                  {/* Close Button */}
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="absolute top-4 right-4 z-10 text-white hover:bg-white/20"
+                    onClick={() => setSelectedImage(null)}
+                  >
+                    <X className="h-6 w-6" />
+                  </Button>
+
+                  {/* Download Button */}
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="absolute top-4 right-16 z-10 text-white hover:bg-white/20"
+                    onClick={() => handleDownload(galleryImages[selectedImage], selectedImage)}
+                  >
+                    <Download className="h-6 w-6" />
+                  </Button>
+
+                  {/* Previous Button */}
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white hover:bg-white/20"
+                    onClick={handlePrevImage}
+                  >
+                    <ChevronLeft className="h-8 w-8" />
+                  </Button>
+
+                  {/* Next Button */}
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white hover:bg-white/20"
+                    onClick={handleNextImage}
+                  >
+                    <ChevronRight className="h-8 w-8" />
+                  </Button>
+
+                  {/* Image */}
+                  <div className="flex items-center justify-center min-h-[50vh] max-h-[85vh] p-8">
+                    <img
+                      src={galleryImages[selectedImage]}
+                      alt={`Alliance ${selectedImage + 1}`}
+                      className="max-w-full max-h-[80vh] object-contain"
+                    />
+                  </div>
+
+                  {/* Image Counter */}
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white bg-black/50 px-4 py-2 rounded-full">
+                    {selectedImage + 1} / {galleryImages.length}
+                  </div>
+                </div>
+              )}
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
     </section>
