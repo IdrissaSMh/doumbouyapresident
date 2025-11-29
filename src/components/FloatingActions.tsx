@@ -8,7 +8,7 @@ const FloatingActions = () => {
   const navigate = useNavigate();
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/224628606675", "_blank");
+    window.open("https://wa.me/22461001020", "_blank");
   };
 
   const handleDocuments = () => {
