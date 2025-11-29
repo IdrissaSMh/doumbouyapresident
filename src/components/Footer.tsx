@@ -112,7 +112,9 @@ const Footer = () => {
               <h3 className="text-sm font-semibold text-foreground">Suivez-nous</h3>
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/profile.php?id=100067030475834"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
                   aria-label="Facebook"
                 >
